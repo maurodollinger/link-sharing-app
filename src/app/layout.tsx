@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
-import { Instrument_Sans } from "next/font/google";
-import "./globals.scss";
-import { AuthProvider } from "./contexts/AuthProvider";
+import { ClerkProvider } from '@clerk/nextjs';
+import type { Metadata } from 'next';
+import { Instrument_Sans } from 'next/font/google';
 
-const instrument_sans = Instrument_Sans({ subsets: ["latin"] });
+import './globals.css';
+import './globals.scss';
+
+const instrument_sans = Instrument_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Link Sharing App",
-  description: "Created by Mauro Dollinger",
-}
+  title: 'Link Sharing App',
+  description: 'Created by Mauro Dollinger',
+};
 
 export default function RootLayout({
   children,
@@ -16,12 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={instrument_sans.className}>
-        <AuthProvider>
+    <ClerkProvider>
+      <html lang='en'>
+        <body className={`${instrument_sans.className}`}>
           {children}
-        </AuthProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

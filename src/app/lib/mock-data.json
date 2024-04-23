@@ -1,0 +1,19 @@
+{
+  "links": [
+    {
+      "id": "1",
+      "url": "https://example.com/link1",
+      "platform": "github"
+    },
+    {
+      "id": "2",
+      "url": "https://example.com/link2",
+      "platform": "youtube"
+    },
+    {
+      "id": "3",
+      "url": "https://example.com/link3",
+      "platform": "facebook"
+    }
+  ]
+}
