@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://maurodollinger-s-workspace-17b8fq.us-east-1.xata.sh/db/link-sharing-app",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
